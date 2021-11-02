@@ -11,13 +11,13 @@
       />
     </div>
     <div class="form-control">
-      <label for="day">Day & Time</label>
+      <label for="day">Day &amp; Time</label>
       <input
         type="text"
         id="day"
         name="day"
         v-model="day"
-        placeholder="Add Day & Time"
+        placeholder="Add Day &amp; Time"
       />
     </div>
     <div class="form-control form-control-check">

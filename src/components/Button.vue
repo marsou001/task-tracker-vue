@@ -11,7 +11,7 @@
         },
         methods: {
             onClick() {
-                console.log("yoooooo");
+                this.$emit("toggle-add-task");
             }
         },    
     }
