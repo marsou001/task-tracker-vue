@@ -1,5 +1,5 @@
 <template>
-  <div :class="[task.reminder ? 'reminder': '', 'task']" @dblclick="$emit('toggle-reminder', task.id)">
+  <div :class="[task.reminder ? 'reminder': '', 'task']" @dblclick="toggleReminder(task.id)">
     <h3>
         {{ task.text }}
         <i class="fas fa-times" @click="onDelete(task.id)"></i>
@@ -15,10 +15,13 @@ export default {
     task: Object,
   },
   methods: {
+      toggleReminder(id) {
+        this.$store.dispatch("toggleReminder", id);
+      },
       onDelete(id) {
-          this.$emit("delete-task", id);
+          this.$store.dispatch("deleteTask", id);
       }
-  }
+  },
 };
 </script>
 

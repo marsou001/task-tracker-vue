@@ -32,39 +32,39 @@
 export default {
   name: "AddTask",
   data() {
-      return {
-          text: '',
-          day: '',
-          reminder: false,
-      }
+    return {
+      text: "",
+      day: "",
+      reminder: false,
+    };
   },
   methods: {
-      onSubmit(e) {
-          e.preventDefault();
+    onSubmit(e) {
+      e.preventDefault();
 
-          if (!this.text) {
-              alert("Please add a task!");
-              return;
-          }
-          
-          if (!this.day) {
-              alert("Please add a day!");
-              return;
-          }
-
-          const newTask = {
-              text: this.text,
-              day: this.day,
-              reminder: this.reminder,
-          }
-
-          this.$emit("add-task", newTask);
-
-          this.text = '';
-          this.day = '';
-          this.reminder = false;
+      if (!this.text) {
+        alert("Please add a task!");
+        return;
       }
-    }
+
+      if (!this.day) {
+        alert("Please add a day!");
+        return;
+      }
+
+      const newTask = {
+        text: this.text,
+        day: this.day,
+        reminder: this.reminder,
+      };
+
+      this.$store.dispatch('addTask', newTask);
+
+      this.text = "";
+      this.day = "";
+      this.reminder = false;
+    },
+  },
 };
 </script>
 

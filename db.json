@@ -13,12 +13,6 @@
       "reminder": true
     },
     {
-      "id": "3",
-      "text": "Food shopping",
-      "day": "March 7th at 2:00pm",
-      "reminder": false
-    },
-    {
       "id": 21597,
       "text": "Walking my dog",
       "day": "March 10th at 3:30pm",
